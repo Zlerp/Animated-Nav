@@ -1,0 +1,93 @@
+body{
+  background-color: black;
+}
+
+#menu {position: fixed;
+  width: 100%;
+  ul {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    height: 55px;
+
+
+    li {
+      display: table-cell;
+      text-align: center;
+      box-sizing: border-box;
+      height: 100%;
+      vertical-align: middle;
+      position: relative;
+
+      a{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: white;
+      }
+    }
+      li.navSpace {
+        width: 30%
+      }
+  }
+}
+
+#overLogo {
+  height: 70px;
+  width: auto;
+  margin-top: 20px;
+  overflow: visible;
+  g path {
+        stroke-width: 5;
+      }
+
+    .st0 {
+      fill: rgba(250, 129, 139, 0.55);
+      @include translateRotate(-70px, 120px, -37);
+      @include animate(.3);
+
+    }
+
+    .st1 {
+      fill: rgba(217, 238, 132, 0.55);
+      @include translateRotate(20px, 220px, -90);
+      @include animate(.3);
+    }
+
+    .st2 {
+      // stroke: teal;
+      fill: rgba(19, 226, 232, 0.54);
+      @include translateRotate(470px, -80px, 90);
+      @include animate(.3);
+    }
+
+    .st3 {
+      // stroke: violet;
+      fill: rgba(150, 116, 185, 0.52);
+      @include translateRotate(80px, 70px, 90);
+      @include animate(.3);
+    }
+    .st4 {
+      // stroke: cyan;
+      fill:  rgba(67, 100, 241, 0.56);
+      @include translateRotate(560px, -20px, 90);
+      @include animate(.3);
+    }
+}
+#overLogo:hover {
+  path.st1, .st2, .st3, .st4, .st0 {
+    @include translateRotate(0px, 0px, 0);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #menu.responsive {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #hamburger {
+    display: none;
+  }
+}

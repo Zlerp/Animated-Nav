@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: black; }
+
+#menu {
+  position: fixed;
+  width: 100%; }
+  #menu ul {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    height: 55px; }
+    #menu ul li {
+      display: table-cell;
+      text-align: center;
+      box-sizing: border-box;
+      height: 100%;
+      vertical-align: middle;
+      position: relative; }
+      #menu ul li a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: white; }
+    #menu ul li.navSpace {
+      width: 30%; }
+
+#overLogo {
+  height: 70px;
+  width: auto;
+  margin-top: 20px;
+  overflow: visible; }
+  #overLogo g path {
+    stroke-width: 5; }
+  #overLogo .st0 {
+    fill: rgba(250, 129, 139, 0.55);
+    -moz-transform: translate(-70px, 120px) rotate(-37deg);
+    -o-transform: translate(-70px, 120px) rotate(-37deg);
+    -ms-transform: translate(-70px, 120px) rotate(-37deg);
+    -webkit-transform: translate(-70px, 120px) rotate(-37deg);
+    transform: translate(-70px, 120px) rotate(-37deg);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+  #overLogo .st1 {
+    fill: rgba(217, 238, 132, 0.55);
+    -moz-transform: translate(20px, 220px) rotate(-90deg);
+    -o-transform: translate(20px, 220px) rotate(-90deg);
+    -ms-transform: translate(20px, 220px) rotate(-90deg);
+    -webkit-transform: translate(20px, 220px) rotate(-90deg);
+    transform: translate(20px, 220px) rotate(-90deg);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+  #overLogo .st2 {
+    fill: rgba(19, 226, 232, 0.54);
+    -moz-transform: translate(470px, -80px) rotate(90deg);
+    -o-transform: translate(470px, -80px) rotate(90deg);
+    -ms-transform: translate(470px, -80px) rotate(90deg);
+    -webkit-transform: translate(470px, -80px) rotate(90deg);
+    transform: translate(470px, -80px) rotate(90deg);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+  #overLogo .st3 {
+    fill: rgba(150, 116, 185, 0.52);
+    -moz-transform: translate(80px, 70px) rotate(90deg);
+    -o-transform: translate(80px, 70px) rotate(90deg);
+    -ms-transform: translate(80px, 70px) rotate(90deg);
+    -webkit-transform: translate(80px, 70px) rotate(90deg);
+    transform: translate(80px, 70px) rotate(90deg);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+  #overLogo .st4 {
+    fill: rgba(67, 100, 241, 0.56);
+    -moz-transform: translate(560px, -20px) rotate(90deg);
+    -o-transform: translate(560px, -20px) rotate(90deg);
+    -ms-transform: translate(560px, -20px) rotate(90deg);
+    -webkit-transform: translate(560px, -20px) rotate(90deg);
+    transform: translate(560px, -20px) rotate(90deg);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+
+#overLogo:hover path.st1, #overLogo:hover .st2, #overLogo:hover .st3, #overLogo:hover .st4, #overLogo:hover .st0 {
+  -moz-transform: translate(0px, 0px) rotate(0deg);
+  -o-transform: translate(0px, 0px) rotate(0deg);
+  -ms-transform: translate(0px, 0px) rotate(0deg);
+  -webkit-transform: translate(0px, 0px) rotate(0deg);
+  transform: translate(0px, 0px) rotate(0deg); }
+
+@media screen and (max-width: 700px) {
+  #menu.responsive {
+    display: none; } }
+@media screen and (min-width: 700px) {
+  #hamburger {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */
