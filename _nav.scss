@@ -25,6 +25,7 @@ body{
         width: 100%;
         height: 100%;
         color: white;
+        @include animate(.2);
       }
       a:hover, a:active {
         color: rgb(80, 159, 230)
@@ -212,13 +213,14 @@ body{
   }
 
   #overLogo {
+    margin-top: 10px;
     @include animate(0.1);
     path.st1, .st2, .st3, .st4, .st0 {
       @include translateRotate(0px, 0px, 0);
     }
   }
   #overLogo:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 }
 
