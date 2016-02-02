@@ -20,36 +20,7 @@ $(document).ready(function() {
       console.log("Received click while clickState = " + clickState);
       advanceToNextClickState();
       $('#slideMenu').animate(cssForState[clickState]);
-      $('#hamburger').slideUp(fast);
+      $('#hamburger').toggleClass('toggleAnimation normal');
+      $('#h-mid').fadeToggle('100');
   });
 });
-
-
-// if (opened == "no" ) {
-//   $(".toggleMenu").click(function(){
-//     $("#slideMenu").animate({left: "250px"}, 300);
-//     opened = "yes";
-//     console.log(opened);
-//   });
-//   if (opened == "yes" ) {
-//     $(".toggleMenu").click(function(){
-//     $("#slideMenu").animate({right: "250px"}, 300);
-//     opened = "no";
-//     console.log(opened);
-//   });
-// }
-// var opened = "no";
-// if (opened == "no") {
-//   $(".toggleMenu").click(function(){
-//     console.log("open modal");
-//     opened = "yes";
-//     console.log(opened);
-//   });
-// }
-// if (opened == "yes") {
-//   $(".toggleMenu").click(function(){
-//     console.log("close modal");
-//     opened = "no";
-//
-//   });
-// }

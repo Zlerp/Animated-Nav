@@ -81,6 +81,9 @@ body {
 #hamburger {
   color: white; }
 
+.hidden {
+  display: none; }
+
 #overLogo {
   height: 70px;
   width: auto;
@@ -185,6 +188,24 @@ body {
       border-bottom: 2px solid #000; }
       #slideMenu ul li.social-menu a {
         border: none; }
+        #slideMenu ul li.social-menu a i {
+          color: rgba(0, 0, 0, 0.5);
+          -webkit-transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out; }
+        #slideMenu ul li.social-menu a i.tw:hover, #slideMenu ul li.social-menu a i.tw:active {
+          color: #00aced; }
+        #slideMenu ul li.social-menu a i.ig:hover, #slideMenu ul li.social-menu a i.ig:active {
+          color: #517fa4; }
+        #slideMenu ul li.social-menu a i.fb:hover, #slideMenu ul li.social-menu a i.fb:active {
+          color: #3b5998; }
+        #slideMenu ul li.social-menu a i.gh:hover, #slideMenu ul li.social-menu a i.gh:active {
+          color: #000; }
+        #slideMenu ul li.social-menu a i.li:hover, #slideMenu ul li.social-menu a i.li:active {
+          color: #007bb6; }
+        #slideMenu ul li.social-menu a i.ri:hover, #slideMenu ul li.social-menu a i.ri:active {
+          color: #ff4500; }
 
 .toggleMenu {
   position: absolute;
@@ -207,7 +228,8 @@ body {
     display: none; }
 
   .toggleMenu {
-    display: block; }
+    display: block;
+    overflow: visible; }
 
   #slideMenu {
     display: block; }
@@ -226,5 +248,46 @@ body {
 
   #overLogo:hover {
     transform: scale(1.3); } }
+.toggleAnimation #h-top {
+  -moz-transform: translate(200px, -20px) rotate(45deg);
+  -o-transform: translate(200px, -20px) rotate(45deg);
+  -ms-transform: translate(200px, -20px) rotate(45deg);
+  -webkit-transform: translate(200px, -20px) rotate(45deg);
+  transform: translate(200px, -20px) rotate(45deg);
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
+.toggleAnimation #h-bot {
+  -moz-transform: translate(-150px, 180px) rotate(-45deg);
+  -o-transform: translate(-150px, 180px) rotate(-45deg);
+  -ms-transform: translate(-150px, 180px) rotate(-45deg);
+  -webkit-transform: translate(-150px, 180px) rotate(-45deg);
+  transform: translate(-150px, 180px) rotate(-45deg);
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
+
+.normal #h-top {
+  -moz-transform: translate(0px, 0px) rotate(0deg);
+  -o-transform: translate(0px, 0px) rotate(0deg);
+  -ms-transform: translate(0px, 0px) rotate(0deg);
+  -webkit-transform: translate(0px, 0px) rotate(0deg);
+  transform: translate(0px, 0px) rotate(0deg);
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
+.normal #h-bot {
+  -moz-transform: translate(0px, 0px) rotate(0deg);
+  -o-transform: translate(0px, 0px) rotate(0deg);
+  -ms-transform: translate(0px, 0px) rotate(0deg);
+  -webkit-transform: translate(0px, 0px) rotate(0deg);
+  transform: translate(0px, 0px) rotate(0deg);
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */

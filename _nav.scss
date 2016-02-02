@@ -42,6 +42,12 @@ body{
   color: white;
 }
 
+.hidden {
+  display: none;
+}
+
+
+
 
 // ------ ANIMATIONS ------ //
 
@@ -144,6 +150,30 @@ body{
       border-bottom: 2px solid #000;
       a {
         border: none;
+
+        i{
+          color: rgba(0, 0, 0, 0.50);
+          @include animate(0.2);
+        }
+
+        i.tw:hover, i.tw:active {
+          color: $twitter;
+        }
+        i.ig:hover, i.ig:active {
+          color: $instagram;
+        }
+        i.fb:hover, i.fb:active {
+          color: $facebook;
+        }
+        i.gh:hover, i.gh:active {
+          color: $github;
+        }
+        i.li:hover, i.li:active {
+          color: $linkedin;
+        }
+        i.ri:hover, i.ri:active {
+          color: $reddit;
+        }
       }
     }
   }
@@ -175,6 +205,7 @@ body{
 
   .toggleMenu{
     display: block;
+    overflow: visible;
   }
   #slideMenu {
     display: block;
@@ -188,5 +219,31 @@ body{
   }
   #overLogo:hover{
     transform: scale(1.3);
+  }
+}
+
+
+// icon SVG animations
+
+
+.toggleAnimation{
+  #h-top{
+    @include translateRotate(200px, -20px, 45);
+    @include animate(0.4);
+  }
+  #h-bot{
+    @include translateRotate(-150px, 180px, -45);
+    @include animate(0.4);
+  }
+}
+.normal{
+  #h-top{
+    @include translateRotate(0px, 0px, 0);
+    @include animate(0.4);
+  }
+  #h-bot{
+    @include translateRotate(0px, 0px, 0);
+    @include animate(0.4);
+
   }
 }
