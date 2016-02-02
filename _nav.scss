@@ -1,5 +1,6 @@
 body{
   background-color: black;
+  @include lato;
 }
 
 #menu {position: fixed;
@@ -25,12 +26,25 @@ body{
         height: 100%;
         color: white;
       }
+      a:hover, a:active {
+        color: rgb(80, 159, 230)
+      }
     }
       li.navSpace {
-        width: 30%
+        width: 40%
       }
   }
 }
+
+
+
+#hamburger {
+  color: white;
+}
+
+
+// ------ ANIMATIONS ------ //
+
 
 #overLogo {
   height: 70px;
@@ -45,7 +59,6 @@ body{
       fill: rgba(250, 129, 139, 0.55);
       @include translateRotate(-70px, 120px, -37);
       @include animate(.3);
-
     }
 
     .st1 {
@@ -68,26 +81,112 @@ body{
       @include animate(.3);
     }
     .st4 {
-      // stroke: cyan;
       fill:  rgba(67, 100, 241, 0.56);
       @include translateRotate(560px, -20px, 90);
       @include animate(.3);
     }
 }
-#overLogo:hover {
+#overLogo:hover{
   path.st1, .st2, .st3, .st4, .st0 {
     @include translateRotate(0px, 0px, 0);
   }
 }
+#overLogo:active {
 
-@media screen and (max-width: 700px) {
-  #menu.responsive {
-    display: none;
+}
+
+#slideMenu {
+  display: none;
+  position: fixed;
+  height: 100%;
+  background-color: #fff;
+  width: 300px;
+  margin-left: -300px;
+
+  ul{
+    width: 100%;
+    border-collapse: collapse;
+    li.slideLogo {
+      height: 110px;
+    }
+    li {
+        display: table;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        position: relative;
+      a{
+        color: black;
+        display: table-cell;
+        vertical-align: middle;
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+
+
+    }
+
+    li:not(:first-child):not(:last-child) {
+      a:active, a:hover{
+        background-color: #e8e8e8;
+        color: rgb(80, 159, 230);
+      }
+    }
+
+    li:nth-last-child(2){
+      a{
+        border-bottom: 2px solid #000;
+      }
+    }
+
+    li.social-menu {
+      border-collapse: collapse;
+      border-bottom: 2px solid #000;
+      a {
+        border: none;
+      }
+    }
+  }
+}
+.toggleMenu{
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  text-align: right;
+  display: none;
+  svg {
+    padding-right: 20px;
+    stroke-width: 20px;
+    stroke: white;
+    width: 40px;
+    margin: auto;
+    position: relative;
+    padding-top: 10px;
+    cursor: pointer;
   }
 }
 
-@media screen and (min-width: 700px) {
-  #hamburger {
+
+
+@media screen and (max-width: 768px) {
+  #menu{
     display: none;
+  }
+
+  .toggleMenu{
+    display: block;
+  }
+  #slideMenu {
+    display: block;
+  }
+
+  #overLogo {
+    @include animate(0.1);
+    path.st1, .st2, .st3, .st4, .st0 {
+      @include translateRotate(0px, 0px, 0);
+    }
+  }
+  #overLogo:hover{
+    transform: scale(1.3);
   }
 }

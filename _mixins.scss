@@ -1,3 +1,14 @@
+// fonts:
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,400italic,300,100|Pacifico);
+@mixin pacifico {
+	font-family: 'Pacifico', cursive;
+}
+@mixin lato {
+	font-family: 'Lato', sans-serif;
+}
+
+
+
 // generic transform
 @mixin transform($transforms) {
 	   -moz-transform: $transforms;
@@ -11,7 +22,7 @@
 	-webkit-transition: #{$time}s ease-in-out;
 	-moz-transition: #{$time}s ease-in-out;
 	-o-transition: #{$time}s ease-in-out;
-	transition: #{$time}s ease-in-out;  
+	transition: #{$time}s ease-in-out;
 }
 
 // rotate
