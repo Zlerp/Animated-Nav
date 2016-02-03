@@ -1,5 +1,5 @@
 body{
-  background-color: black;
+  background-color: #4fb9d5;
   @include lato;
 }
 
@@ -109,6 +109,7 @@ body{
   background-color: #fff;
   width: 300px;
   margin-left: -300px;
+  z-index: 20;
 
   ul{
     width: 100%;
@@ -152,28 +153,33 @@ body{
       a {
         border: none;
 
-        i{
-          color: rgba(0, 0, 0, 0.50);
+        i.tw {
+          color: $twitter;
+          @include animate(0.2);
+        }
+        i.ig {
+          color: $instagram;
+          @include animate(0.2);
+        }
+        i.fb {
+          color: $facebook;
+          @include animate(0.2);
+        }
+        i.gh {
+          color: $github;
+          @include animate(0.2);
+        }
+        i.li {
+          color: $linkedin;
+          @include animate(0.2);
+        }
+        i.ri {
+          color: $reddit;
           @include animate(0.2);
         }
 
-        i.tw:hover, i.tw:active {
-          color: $twitter;
-        }
-        i.ig:hover, i.ig:active {
-          color: $instagram;
-        }
-        i.fb:hover, i.fb:active {
-          color: $facebook;
-        }
-        i.gh:hover, i.gh:active {
-          color: $github;
-        }
-        i.li:hover, i.li:active {
-          color: $linkedin;
-        }
-        i.ri:hover, i.ri:active {
-          color: $reddit;
+        i:not(.fa-2x):hover {
+          opacity: 0.4;
         }
       }
     }
@@ -185,6 +191,7 @@ body{
   width: 100%;
   text-align: right;
   display: none;
+  z-index: 15;
   svg {
     padding-right: 20px;
     stroke-width: 20px;
@@ -195,6 +202,16 @@ body{
     padding-top: 10px;
     cursor: pointer;
   }
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .4;
+  z-index: 5;
+  display: none;
 }
 
 

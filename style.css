@@ -50,7 +50,7 @@ a {
   text-decoration: none; }
 
 body {
-  background-color: black;
+  background-color: #4fb9d5;
   font-family: 'Lato', sans-serif; }
 
 #menu {
@@ -164,7 +164,8 @@ body {
   height: 100%;
   background-color: #fff;
   width: 300px;
-  margin-left: -300px; }
+  margin-left: -300px;
+  z-index: 20; }
   #slideMenu ul {
     width: 100%;
     border-collapse: collapse; }
@@ -192,31 +193,52 @@ body {
       border-bottom: 2px solid #000; }
       #slideMenu ul li.social-menu a {
         border: none; }
-        #slideMenu ul li.social-menu a i {
-          color: rgba(0, 0, 0, 0.5);
+        #slideMenu ul li.social-menu a i.tw {
+          color: #00aced;
           -webkit-transition: 0.2s ease-in-out;
           -moz-transition: 0.2s ease-in-out;
           -o-transition: 0.2s ease-in-out;
           transition: 0.2s ease-in-out; }
-        #slideMenu ul li.social-menu a i.tw:hover, #slideMenu ul li.social-menu a i.tw:active {
-          color: #00aced; }
-        #slideMenu ul li.social-menu a i.ig:hover, #slideMenu ul li.social-menu a i.ig:active {
-          color: #517fa4; }
-        #slideMenu ul li.social-menu a i.fb:hover, #slideMenu ul li.social-menu a i.fb:active {
-          color: #3b5998; }
-        #slideMenu ul li.social-menu a i.gh:hover, #slideMenu ul li.social-menu a i.gh:active {
-          color: #000; }
-        #slideMenu ul li.social-menu a i.li:hover, #slideMenu ul li.social-menu a i.li:active {
-          color: #007bb6; }
-        #slideMenu ul li.social-menu a i.ri:hover, #slideMenu ul li.social-menu a i.ri:active {
-          color: #ff4500; }
+        #slideMenu ul li.social-menu a i.ig {
+          color: #517fa4;
+          -webkit-transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out; }
+        #slideMenu ul li.social-menu a i.fb {
+          color: #3b5998;
+          -webkit-transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out; }
+        #slideMenu ul li.social-menu a i.gh {
+          color: #811c81;
+          -webkit-transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out; }
+        #slideMenu ul li.social-menu a i.li {
+          color: #007bb6;
+          -webkit-transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out; }
+        #slideMenu ul li.social-menu a i.ri {
+          color: #ff4500;
+          -webkit-transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out; }
+        #slideMenu ul li.social-menu a i:not(.fa-2x):hover {
+          opacity: 0.4; }
 
 .toggleMenu {
   position: absolute;
   height: 70px;
   width: 100%;
   text-align: right;
-  display: none; }
+  display: none;
+  z-index: 15; }
   .toggleMenu svg {
     padding-right: 20px;
     stroke-width: 20px;
@@ -226,6 +248,15 @@ body {
     position: relative;
     padding-top: 10px;
     cursor: pointer; }
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .4;
+  z-index: 5;
+  display: none; }
 
 @media screen and (max-width: 768px) {
   #menu {
